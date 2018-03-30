@@ -1,0 +1,26 @@
+<% include partials/header %>
+<script>
+        $(function() {
+    $('body').vegas({
+        slides: [
+         { src: "https://images.unsplash.com/photo-1475710534222-6165a8b45449?ixlib=rb-0.3.5&s=b4b0451caff94a9c0150b34ecc44d98d&auto=format&fit=crop&w=750&q=80" },
+        { src: "https://images.unsplash.com/photo-1488667499475-42a530fab02b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=528b5ec5b7f515dfd0140ead01f01a20&auto=format&fit=crop&w=750&q=80" },
+        { src: "https://images.unsplash.com/photo-1496947850313-7743325fa58c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8f0bb0006c15a626dab0a5025e7838fa&auto=format&fit=crop&w=750&q=80" },
+        { src: "https://images.unsplash.com/photo-1481973964012-59a7f3225eb1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=91b6cd3028f48974da294133f867966a&auto=format&fit=crop&w=750&q=80" }
+        ],
+        overlay: '/overlays/08.png',
+        transition:'flash'
+    });
+});
+</script>
+
+
+<div class="container main text-center">
+         <div class="content">
+          <img src="/img/tent.png">
+         <h1>Welcome To Campgrounds</h1>
+        <a class="btn btn-default" href="campgrounds">Get Started</a>
+        </div>
+</div>        
+        
+<% include partials/footer %>
