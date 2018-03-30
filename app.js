@@ -18,8 +18,9 @@ var campgroundsRoutes    = require("./routes/campgrounds"),
     
     // seedDB();  //Seed the database 
     // connect to the database
+    mongoose.connect(process.env.DATABASEURL);
+    // mongoose.connect("mongodb://localhost/yelp_camp_v9");
     
-    mongoose.connect("mongodb://localhost/yelp_camp_v9");
     //install body parser
     app.use(bodyParser.urlencoded({extended:true}));
     //set view engine to ejs
