@@ -10,6 +10,8 @@ var express         = require("express"),
         Campground.find({},function(err,allCampgrounds){
             if(err){
                 console.log(err);
+                res.redirect("back");
+                alert(err);
             }else{
                 res.render("campgrounds/index",{campgrounds:allCampgrounds});        
             }
