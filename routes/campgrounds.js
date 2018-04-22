@@ -59,9 +59,10 @@ var express         = require("express"),
         //fing campground with provided id
         Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground) {
             // body...
-            if(err){
+           if(err || !foundCampground){
                 req.flash("error", "Something Went Wrong");
                 console.log(err);
+                res.redirect("back");
             }else
                 {   
                     // console.log(foundCampground);

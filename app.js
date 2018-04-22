@@ -19,9 +19,10 @@ var campgroundsRoutes    = require("./routes/campgrounds"),
     // seedDB();  //Seed the database 
     
     // connect to the database
-    console.log(process.env.DATABASEURL);
-    mongoose.connect(process.env.DATABASEURL);
+     console.log(process.env.DATABASEURL);
+    // mongoose.connect("mongodb://parag:parag1997@ds229549.mlab.com:29549/yelpcampparag");
     // mongoose.connect("mongodb://localhost/yelp_camp_v9");
+     mongoose.connect(process.env.DATABASEURL);
     
     //install body parser
     app.use(bodyParser.urlencoded({extended:true}));
