@@ -23,6 +23,9 @@ var express     = require("express"),
     //handle sign up logic
     router.post("/register", function(req, res) {
         var newUser = new User({username: req.body.username})
+        if(req.body.adminCode === "AdminCode1997"){
+            newUser.isAdmin  = true;
+        }
         User.register(newUser,req.body.password, function(err, user) {
             // body...
             if(err){

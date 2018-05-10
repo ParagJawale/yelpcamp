@@ -1,3 +1,4 @@
+require('dotenv').config();
 var express               = require("express"),
     app                   = express(),
     bodyParser            = require("body-parser"),
@@ -17,11 +18,13 @@ var campgroundsRoutes    = require("./routes/campgrounds"),
     indexRoutes           = require("./routes/index")
     
     // seedDB();  //Seed the database 
-    
+    var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v9";
     // connect to the database
-    console.log(process.env.DATABASEURL);
-    mongoose.connect(process.env.DATABASEURL);
+     console.log(process.env.DATABASEURL);
+    // mongoose.connect("mongodb://parag:parag1997@ds229549.mlab.com:29549/yelpcampparag");
     // mongoose.connect("mongodb://localhost/yelp_camp_v9");
+    
+     mongoose.connect(url);
     
     //install body parser
     app.use(bodyParser.urlencoded({extended:true}));

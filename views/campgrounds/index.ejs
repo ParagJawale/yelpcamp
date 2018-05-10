@@ -1,10 +1,13 @@
 <% include ../partials/header%>
 
     
+    
  <div class="container">
      <header class="jumbotron">
          <div class="container">
-             <h1>Welcome To YelpCamp!</h1>
+             <h1>Welcome To YelpCamp! <% if(currentUser && currentUser.isAdmin){ %>
+       Admin
+    <% } %></h1>
              <p>View our hand-picked campgrounds from all over the world</p>
              <p>
                 <a class="btn btn-primary btn-large" href="/campgrounds/new">Add New Campground</a>

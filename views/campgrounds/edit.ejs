@@ -7,7 +7,14 @@
         <input class="form-control" type="text" name="campground[name]" value="<%=campground.name%>">
         </div>
         <div class="form-group">
+        <input class="form-control" type="number" name="campground[price]" value="<%=campground.price%>" min="50" step="10">
+        </div>
+        <div class="form-group">
         <input class="form-control" type="text" name="campground[image]" value="<%=campground.image%>">
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input class="form-control" type="text" name="location" id="location" value="<%= campground.location %>">
         </div>
         <div class= "form-group">
             <input class="form-control" type="text" name= "campground[description]" value="<%=campground.description%>">
