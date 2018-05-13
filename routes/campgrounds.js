@@ -88,11 +88,7 @@ var geocoder = NodeGeocoder(options);
         //fing campground with provided id
         Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground) {
             // body...
-<<<<<<< HEAD
-            if(err || !foundCampground){
-=======
            if(err || !foundCampground){
->>>>>>> 6c3c71fa205fc31f731c76d00a3c6c4293b7515a
                 req.flash("error", "Something Went Wrong");
                 console.log(err);
                 res.redirect("back");
