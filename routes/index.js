@@ -17,7 +17,7 @@ var express     = require("express"),
     
     //sign up form
     router.get("/register", function(req, res) {
-        res.render("register");
+        res.render("register", {page: 'register'});
     });
     
     //handle sign up logic
@@ -28,11 +28,10 @@ var express     = require("express"),
         }
         User.register(newUser,req.body.password, function(err, user) {
             // body...
-            if(err){
-                console.log(err);
-                req.flash("error", err.message);
-                res.redirect("register");
-            }
+          if(err){
+                    console.log(err);
+                    return res.render("register", {error: err.message});
+                }
             passport.authenticate("local")(req,res, function(){
                 res.redirect("/campgrounds");
             });
@@ -41,7 +40,7 @@ var express     = require("express"),
     
     //signIn form
     router.get("/login", function(req, res) {
-        res.render("login");
+        res.render("login", {page: 'login'});
     });
     
     //handling Login Logic
