@@ -53,7 +53,11 @@ var express       = require("express"),
 //Comment edit route
 
 router.get("/:comment_id/edit",middleware.checkCommentOwnership , function(req, res){
+<<<<<<< HEAD
     Campground.findById(req.params.id, function(err, foundCampground) {
+=======
+     Campground.findById(req.params.id, function(err, foundCampground) {
+>>>>>>> 6c3c71fa205fc31f731c76d00a3c6c4293b7515a
         if(err || !foundCampground){
             req.flash("error", "NO campground found");
             res.redirect("back");
@@ -67,7 +71,10 @@ router.get("/:comment_id/edit",middleware.checkCommentOwnership , function(req, 
         }
     });
     });
+<<<<<<< HEAD
    
+=======
+>>>>>>> 6c3c71fa205fc31f731c76d00a3c6c4293b7515a
    
 });
 

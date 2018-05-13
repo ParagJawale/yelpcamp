@@ -23,6 +23,7 @@ var campgroundsRoutes    = require("./routes/campgrounds"),
      console.log(process.env.DATABASEURL);
     // mongoose.connect("mongodb://parag:parag1997@ds229549.mlab.com:29549/yelpcampparag");
     // mongoose.connect("mongodb://localhost/yelp_camp_v9");
+     mongoose.connect(process.env.DATABASEURL);
     
      mongoose.connect(url);
     
